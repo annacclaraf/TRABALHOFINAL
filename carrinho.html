@@ -1,0 +1,276 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+ const navMenu = document.querySelector('nav ul');
+ 
+ hamburger.addEventListener('click', () => {
+   hamburger.classList.toggle('active');
+   navMenu.classList.toggle('open'); 
+ });
+   </script>
+<style>body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f6fcfc;
+    color: #1c2b33;
+}
+
+
+.cart-header {
+    background: #0bb7d4;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+
+.cart-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #0bb7d4;
+    font-weight: 600;
+    font-size: 18px;
+    transition: .2s;
+}
+
+.voltar:hover {
+    color: #0889a0;
+}
+
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li {
+    background: white;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+
+
+.cart-summary {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 20px;
+    text-align: center;
+}
+
+.cart-summary p {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+#checkout-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background: #0bb7d4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .3s;
+}
+
+#checkout-button:hover {
+    background: #0889a0;
+}
+.cart-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+
+#cart-items li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+
+#cart-items li img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+#cart-items li p {
+    margin: 3px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+#cart-items li h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+@media (max-width: 980px) {
+
+.cart-container {
+  padding: 20px 15px;
+}
+
+#cart-items li {
+  padding: 15px;
+}
+
+#cart-items li img {
+  width: 75px;
+  height: 75px;
+}
+
+#checkout-button {
+  font-size: 17px;
+}
+}
+
+
+@media (max-width: 768px) {
+
+.cart-header {
+  font-size: 22px;
+  padding: 18px;
+}
+
+#cart-items li {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.cart-item-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#cart-items li img {
+  width: 70px;
+  height: 70px;
+}
+
+#cart-items li h3 {
+  font-size: 16px;
+}
+
+#cart-items li p {
+  font-size: 14px;
+}
+
+.cart-summary {
+  padding: 20px;
+}
+}
+
+
+@media (max-width: 480px) {
+
+.cart-header {
+  font-size: 20px;
+  padding: 15px;
+}
+
+.voltar {
+  font-size: 16px;
+}
+
+#cart-items li {
+  flex-direction: column;
+  text-align: center;
+  padding: 18px;
+}
+
+#cart-items li img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+#cart-items li h3 {
+  font-size: 17px;
+}
+
+#cart-items li p {
+  font-size: 15px;
+}
+
+.cart-summary {
+  font-size: 17px;
+  padding: 18px;
+}
+
+#checkout-button {
+  font-size: 16px;
+  padding: 14px;
+}
+}
+
+</style>
+<body>
+
+<header class="cart-header">
+    <h1>Meu Carrinho</h1>
+</header>
+
+<main class="cart-container">
+
+   
+    <a href="index.html" class="voltar">← Voltar para a Loja</a>
+
+    <ul id="cart-items"></ul>
+
+    <div class="cart-summary">
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <a href="pagamento.html"><button id="checkout-button">Finalizar Compra</button></a>
+    </div>
+</main>
+
+<script src="script1.js"></script>
+</body>
+</html>

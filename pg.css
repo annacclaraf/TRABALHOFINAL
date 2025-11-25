@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+}
+
+
+.pay-header {
+  background: #79cfd9;
+  padding: 25px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 26px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #62bbc3;
+}
+
+
+.pay-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.voltar {
+  text-decoration: none;
+  color: #79cfd9;
+  font-size: 17px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.voltar:hover {
+  color: #62bbc3;
+}
+
+
+.pay-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  border: 2px solid #79cfd9;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.pay-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.preco-total {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+
+.payment-options {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.pay-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #79cfd9;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.two {
+  display: flex;
+  gap: 20px;
+}
+
+
+.qrcode {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(45deg, #79cfd9, #e9f9fa);
+  margin: 10px auto;
+  border-radius: 12px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: #1c2b33;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #1c2b33;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  top: 10px;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.btn-confirmar {
+  width: 100%;
+  padding: 15px;
+  background: #79cfd9;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn-confirmar:hover {
+  background: #62bbc3;
+}
+
+.hidden {
+  display: none;
+}
+@media (max-width: 768px) {
+
+  .pay-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .pay-box {
+    padding: 20px;
+  }
+
+  .pay-header {
+    font-size: 22px;
+    padding: 18px;
+  }
+
+  .preco-total {
+    font-size: 16px;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .two {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn-confirmar {
+    font-size: 17px;
+    padding: 14px;
+  }
+
+  .qrcode {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .pay-header {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .voltar {
+    font-size: 15px;
+  }
+
+  .pay-box h2 {
+    font-size: 18px;
+  }
+
+  .preco-total {
+    font-size: 15px;
+  }
+
+  .qrcode {
+    width: 130px;
+    height: 130px;
+  }
+
+  .btn-confirmar {
+    font-size: 16px;
+  }
+}

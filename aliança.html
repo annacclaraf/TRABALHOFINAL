@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alianças - Inova Joias</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+   const navMenu = document.querySelector('nav ul');
+   
+   hamburger.addEventListener('click', () => {
+     hamburger.classList.toggle('active');
+     navMenu.classList.toggle('open'); 
+   });
+     </script>
+<style>
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: #1c2b33;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #1c2b33;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  top: 10px;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 980px) {
+    .grid-produtos {
+        gap: 25px;
+        padding: 15px;
+    }
+
+    .card-produto img {
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .grid-produtos {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .card-produto img {
+        height: 180px;
+    }
+
+    .titulo-pagina {
+        font-size: 28px;
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 8px;
+    }
+
+    .card-produto img {
+        height: 160px;
+    }
+
+    .card-produto h3 {
+        font-size: 16px;
+    }
+
+    .card-produto p {
+        font-size: 14px;
+    }
+
+    .add-cart-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.zoom {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.zoom:hover {
+    transform: scale(1.15); 
+}
+.card-produto {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.06);
+}
+
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 22px rgba(0,0,0,0.12);
+}
+
+
+.card-produto img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-produto img:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+}
+
+
+.card-produto h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+
+.preco {
+    font-size: 19px;
+    color: #0088b8;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+
+.add-cart-btn {
+    background: linear-gradient(135deg, #19b3d1, #0e8ab1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.add-cart-btn:hover {
+    background: linear-gradient(135deg, #0e8ab1, #0a6d8c);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-top: 100px; 
+    margin-bottom: 30px; 
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.lg {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.lg-img {
+    height: 40px;     
+    width: auto;
+    object-fit: contain;
+}.navbar {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+
+</style>
+
+<body>
+  <header class="navbar">
+    <div class="hamburger"></div>
+    <div class="lg">
+    <a class="zoom" href="index.html"><img src="img/Gemini_Generated_Image_98fier98fier98fi (1) (1).png" alt="Logo" class="lg-img"></a>
+</div>
+    
+  
+    <nav>
+      <ul class="menu">
+        
+        
+        
+        <li class="dropdown">
+          <a href="joias.html">Joias</a>
+            
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h3 class="">Compre por Categoria</h3>
+              <a href="joias.html#Aneis">Aneis</a>
+              <a href="joias.html#Pulseiras">Pulseiras</a>
+              <a href="joias.html#Pingentes">Pingentes</a>
+              <a href="joias.html#Colares">Colares</a>
+            </div>
+  
+          
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="aliança.html">Aliança</a>
+
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h3>Compre por Categoria</h3>
+              <a href="aliança.html#Casamento">Casamento</a>
+              <a href="aliança.html#Noivado">Noivado</a>
+              <a href="aliança.html#Namoro">Namoro</a>
+              <a href="aliança.html#5mm">5mm</a>
+              <a href="aliança.html#3mm">3mm</a>
+              <a href="aliança.html#2mm">2mm</a>
+            </div>
+        </li>
+
+        
+        
+        <li class="dropdown">
+          <a href="">Informações</a>
+
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h3>Categoria</h3>
+              <a href="garantia.html">Garantia</a>
+              <a href="cuidados.html">Cuidados e convervação</a>
+              <a href="confianca.html">confiança</a>
+            </div>
+  
+            
+
+            <li class="dropdown">
+          <a href="#">Historia</a>
+
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h3>Categoria</h3>
+              <a href="historia.html">Tradição</a>
+              <a href="sobre.html">Sobre</a>
+              
+            </div>
+  
+           
+  
+          </div>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="icons">
+      
+      <span><a href="sobre.html">👥</span></a>
+      <span><a href="carrinho.html">🛒</a></span>
+    </div>
+  </header>
+  <h1 class="titulo-pagina">ALIANÇAS</h1>
+
+
+<section class="produtos">
+  <h1 id="Casamento" style="text-align: center;">Casamento</h1>
+
+  <div class="grid-produtos">
+
+      <div class="card-produto">
+          <img src="img/aliancaquadrada.webp" alt="Aliança Clássica Quadrada">
+          <h3>Aliança Clássica Quadrada</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'img/aliancaquadrada')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/aliancalux.webp" alt="Aliança Diamantada">
+          <h3>Aliança Diamantada</h3>
+          <p class="descricao">Brilho intenso com detalhes delicados.</p>
+          <p class="preco">R$ 2.390,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Diamantada', 2390, 'img/aliancalux')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/aliancachanfrada.webp" alt="Aliança Ouro Lux">
+          <h3>Aliança Ouro Lux</h3>
+          <p class="descricao">Luxo moderno para celebrar grandes momentos.</p>
+          <p class="preco">R$ 2.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Ouro Lux', 2990, 'img/aliancachanfrada')">
+              Comprar
+          </button>
+      </div>
+ <div class="card-produto">
+          <img src="img/aliançaclassica.webp" alt="Aliança Clássica ">
+          <h3>Aliança Clássica</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'img/aliançaclassica')">
+              Comprar
+          </button>
+      </div>
+  </div>
+</section>
+
+
+<section class="produtos">
+  <h1 id="Noivado" style="text-align: center;">Noivado</h1>
+
+  <div class="grid-produtos">
+
+      <div class="card-produto">
+          <img src="jj/anelnoivadoestasi.webp" alt="Aliança Noivado Shine">
+          <h3>Aliança Shine</h3>
+          <p class="descricao">Perfeita para o pedido mais especial.</p>
+          <p class="preco">R$ 1.590,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Shine', 1590, 'img/anelnoivadoestasi')">
+              Comprar
+          </button>
+      </div>
+
+     <div class="card-produto">
+          <img src="jj/anelnoivadofelicita.webp" alt="Aliança Amor Eterno">
+          <h3>Aliança Amor Eterno</h3>
+          <p class="descricao">Design elegante com brilho marcante.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Amor Eterno', 1990, 'img/anelnoivadofelicita')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="jj/anelnoivado.webp" alt="Aliança Infinity">
+          <h3>Aliança Infinity</h3>
+          <p class="descricao">Simboliza eternidade e união verdadeira.</p>
+          <p class="preco">R$ 2.390,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Infinity', 2390, 'img/anelnoivado')">
+              Comprar
+          </button>
+      </div>
+ <div class="card-produto">
+          <img src="jj/anelnoivadoeternita.webp" alt="Aliança Clássica Noivado">
+          <h3>Aliança Clássica Noivado</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'jj/anelnoivadoeternita')">
+              Comprar
+          </button>
+      </div>
+  </div>
+</section>
+
+
+<section class="produtos">
+  <h1 id="Namoro" style="text-align: center;">Namoro</h1>
+
+  <div class="grid-produtos">
+
+      <div class="card-produto">
+          <img src="img/1aliancapratacravejada.webp" alt="Aliança Sweet Love">
+          <h3>Aliança Sweet Love</h3>
+          <p class="descricao">Delicada e perfeita para o dia a dia.</p>
+          <p class="preco">R$ 590,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Sweet Love', 590, 'img/1aliancapratacravejada')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/kitalianca.webp" alt="Aliança Heart Glow">
+          <h3>Aliança Heart Glow</h3>
+          <p class="descricao">A escolha ideal para representar carinho.</p>
+          <p class="preco">R$ 790,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Heart Glow', 790, 'img/kitalianca')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/aliancaabaulada.webp" alt="Aliança Romantic">
+          <h3>Aliança Romantic</h3>
+          <p class="descricao">Romântica, leve e super estilosa.</p>
+          <p class="preco">R$ 890,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Romantic', 890, 'img/aliançaclassica')">
+              Comprar
+          </button>
+      </div>
+ <div class="card-produto">
+          <img src="img/aliancasanel.webp" alt="Aliança Clássica Namoro">
+          <h3>Aliança Clássica</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'img/aliancasanel')">
+              Comprar
+          </button>
+      </div>
+  </div>
+</section>
+
+
+<section class="produtos">
+  <h1 id="5mm" style="text-align: center;">Alianças 5mm</h1>
+
+  <div class="grid-produtos">
+
+      <div class="card-produto">
+          <img src="img/5mm1.jpg" alt="Aliança 5mm Classic">
+          <h3>5mm Classic</h3>
+          <p class="descricao">Modelo marcante e muito elegante.</p>
+          <p class="preco">R$ 1.490,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('5mm Classic', 1490, 'img/5mm1.jpg')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/5mm2.jpg" alt="Aliança Brilho 5mm">
+          <h3>Brilho 5mm</h3>
+          <p class="descricao">Acabamento perfeito para um visual marcante.</p>
+          <p class="preco">R$ 1.790,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Brilho 5mm', 1790, 'img/5mm2.jpg')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/5mm3.jpg" alt="Aliança Gold Line">
+          <h3>Gold Line 5mm</h3>
+          <p class="descricao">Design moderno com detalhes dourados.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Gold Line 5mm', 1990, 'img/5mm3.jpg')">
+              Comprar
+          </button>
+      </div>
+ <div class="card-produto">
+          <img src="img/alianca-casamento1.jpg" alt="Aliança Clássica Casamento">
+          <h3>Aliança Clássica</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'img/alianca-casamento1.jpg')">
+              Comprar
+          </button>
+      </div>
+  </div>
+</section>
+
+
+<section class="produtos">
+  <h1 id="3mm" style="text-align: center;">Alianças 3mm</h1>
+
+  <div class="grid-produtos">
+
+      <div class="card-produto">
+          <img src="img/3mm1.jpg" alt="Aliança 3mm Slim">
+          <h3>3mm Slim</h3>
+          <p class="descricao">Minimalista, leve e elegante.</p>
+          <p class="preco">R$ 990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('3mm Slim', 990, 'img/3mm1.jpg')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/3mm2.jpg" alt="Aliança Minimal 3mm">
+          <h3>Minimal 3mm</h3>
+          <p class="descricao">Conforto e beleza em uma joia delicada.</p>
+          <p class="preco">R$ 1.190,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Minimal 3mm', 1190, 'img/3mm2.jpg')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/3mm3.jpg" alt="Aliança Soft 3mm">
+          <h3>Soft 3mm</h3>
+          <p class="descricao">Para quem gosta de algo simples e elegante.</p>
+          <p class="preco">R$ 1.290,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Soft 3mm', 1290, 'img/3mm3.jpg')">
+              Comprar
+          </button>
+      </div>
+ <div class="card-produto">
+          <img src="img/alianca-casamento1.jpg" alt="Aliança Clássica Casamento">
+          <h3>Aliança Clássica</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'img/alianca-casamento1.jpg')">
+              Comprar
+          </button>
+      </div>
+  </div>
+</section>
+
+
+<section class="produtos">
+  <h1 id="2mm" style="text-align: center;">Alianças 2mm</h1>
+
+  <div class="grid-produtos">
+
+      <div class="card-produto">
+          <img src="img/2mm1.jpg" alt="Aliança 2mm Pure">
+          <h3>2mm Pure</h3>
+          <p class="descricao">Extremamente delicada e sofisticada.</p>
+          <p class="preco">R$ 690,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('2mm Pure', 690, 'img/2mm1.jpg')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/2mm2.jpg" alt="Aliança Soft Gold">
+          <h3>Soft Gold 2mm</h3>
+          <p class="descricao">Acabamento dourado suave e elegante.</p>
+          <p class="preco">R$ 890,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Soft Gold 2mm', 890, 'img/2mm2.jpg')">
+              Comprar
+          </button>
+      </div>
+
+      <div class="card-produto">
+          <img src="img/2mm3.jpg" alt="Aliança Minimal Silver">
+          <h3>Minimal Silver 2mm</h3>
+          <p class="descricao">Perfeita para quem prefere joias discretas.</p>
+          <p class="preco">R$ 990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Minimal Silver 2mm', 990, 'img/2mm3.jpg')">
+              Comprar
+          </button>
+      </div>
+ <div class="card-produto">
+          <img src="img/alianca-casamento1.jpg" alt="Aliança Clássica Casamento">
+          <h3>Aliança Clássica</h3>
+          <p class="descricao">Modelo tradicional com acabamento premium.</p>
+          <p class="preco">R$ 1.990,00</p>
+
+          <button class="add-cart-btn"
+              onclick="addItemFromPage('Aliança Clássica', 1990, 'img/alianca-casamento1.jpg')">
+              Comprar
+          </button>
+      </div>
+  </div>
+</section>
+
+
+<footer>
+    <div class="footer-container">
+      <div>
+        <h3>InovaJoias</h3>
+        <p>Alta joalheria com pedras preciosas e design atemporal desde 1985.</p>
+        <div class="social">
+          <a href="#">📷</a>
+          <a href="#">📘</a>
+          <a href="#">▶️</a>
+        </div>
+      </div>
+      <div>
+        <h4>Coleções</h4>
+        <ul>
+          <li>Anéis</li>
+          <li>Colares</li>
+          <li>Pulseiras</li>
+          <li>Brincos</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li>Joias Personalizadas</li>
+          <li>Manutenção</li>
+          <li>Certificação</li>
+          <li>Avaliação</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Av. gilberto de dênis, 2777<br>Patrocínio - MG</p>
+        <p>inovajoias@gmail.com.br<br>(34) 3831-7770</p>
+      </div>
+    </div>
+    <p class="copy">© 2025 inovajoias. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script1.js"></script>
+</body>
+</html>

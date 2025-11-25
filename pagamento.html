@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagamento - Inova Joias</title>
+
+<link rel="stylesheet" href="pg.css">
+</head>
+<body>
+
+<header class="pay-header">
+    <h1>💎 Finalizar Pagamento</h1>
+</header>
+
+<main class="pay-container">
+
+    <a href="carrinho.html" class="voltar">← Voltar ao Carrinho</a>
+
+    <section class="pay-box">
+
+        <h2>Forma de Pagamento</h2>
+
+        <p class="preco-total">Total da compra:  
+            <strong>R$ <span id="total-preco">0.00</span></strong>
+        </p>
+
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="pay" value="cartao" checked>
+                Cartão de Crédito
+            </label>
+
+            <label>
+                <input type="radio" name="pay" value="pix">
+                PIX
+            </label>
+        </div>
+
+        <form id="cartao-form" class="pay-form">
+            <label>Número do Cartão</label>
+            <input type="text" placeholder="0000 0000 0000 0000">
+
+            <label>Nome no Cartão</label>
+            <input type="text" placeholder="Seu nome">
+
+            <div class="two">
+                <div>
+                    <label>Validade</label>
+                    <input type="text" placeholder="MM/AA">
+                </div>
+                <div>
+                    <label>CVV</label>
+                    <input type="text" placeholder="000">
+                </div>
+            </div>
+        </form>
+
+        
+        <div id="pix-form" class="pay-form hidden">
+            <p>🔐 Pague usando o QR Code abaixo:</p>
+
+            <div class="qrcode"></div>
+
+            <p class="pix-info">Ou copie o código abaixo:</p>
+            <input type="text" value="00020126360014BR.GOV.BCB.PIX0114+553199999999520400005303986540510.005802BR5913NOME DA LOJA6010BELO HORIZONTE62070503***6304A13B
+" readonly>
+        </div>
+
+        <button class="btn-confirmar">Confirmar Pagamento</button>
+
+    </section>
+
+</main>
+
+<script src="paga.js"></script>
+</body>
+</html>
