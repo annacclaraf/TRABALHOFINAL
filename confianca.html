@@ -6,98 +6,108 @@
   <title>Confiança — INOVA Joias</title>
   <link href="confianca.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<script>
-  const hamburger = document.querySelector('.hamburger');
- const navMenu = document.querySelector('nav ul');
- 
- hamburger.addEventListener('click', () => {
-   hamburger.classList.toggle('active');
-   navMenu.classList.toggle('open'); 
- });
-   </script>
+
+   <style>.navbar {
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #e4e4e4;
+  font-family: "Helvetica Neue", sans-serif;
+}</style>
 <body>
-<header class="navbar">
-  <div class="hamburger"></div>
-    <div class="lg">
-    <a class="zoom" href="index.html"><img src="img/Gemini_Generated_Image_98fier98fier98fi (1) (1).png" alt="Logo" class="lg-img"></a>
-</div>
-    
-  
-    <nav>
-      <ul class="menu">
+   <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  <div class="container-fluid">
+    <a class="navbar-brand zoom" href="index.html"><img src="img/Gemini_Generated_Image_98fier98fier98fi (1) (1).png" alt="Logo" class="lg-img"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         
-        
-        
-        <li class="dropdown">
-          <a href="joias.html">Joias</a>
-            
-          <div class="mega-menu">
-            <div class="mega-column">
-              <h3 class="">Compre por Categoria</h3>
-              <a href="joias.html#Aneis">Aneis</a>
-              <a href="joias.html#Pulseiras">Pulseiras</a>
-              <a href="joias.html#Pingentes">Pingentes</a>
-              <a href="joias.html#Colares">Colares</a>
-            </div>
-  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Joias
+          </a>
+
+          <ul class="dropdown-menu">
+                 <li><a class="dropdown-item mega-column h3" href="#">Compre por Categoria</a></li>
+              <li><hr class="dropdown-divider"></li>
+       
+            <li><a class="dropdown-item" href="joias.html#Aneis">Aneis</a></li>
+            <li><a class="dropdown-item" href="joias.html#Pulseiras">Pulseira</a></li>
+            <li><a class="dropdown-item" href="joias.html#Pingentes">Pingentes</a></li>
+            <li><a class="dropdown-item" href="joias.html#Colares">Colares</a></li>
           
-          </div>
+          </ul>
         </li>
 
-        <li class="dropdown">
-          <a href="aliança.html">Aliança</a>
 
-          <div class="mega-menu">
-            <div class="mega-column">
-              <h3>Compre por Categoria</h3>
-              <a href="aliança.html#Casamento">Casamento</a>
-              <a href="aliança.html#Noivado">Noivado</a>
-              <a href="aliança.html#Namoro">Namoro</a>
-              <a href="aliança.html#5mm">5mm</a>
-              <a href="aliança.html#3mm">3mm</a>
-              <a href="aliança.html#2mm">2mm</a>
-            </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Aliança
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item mega-column h3" href="#">Compre por Categoria</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="aliança.html#Casamento">Casamento</a></li>
+            <li><a class="dropdown-item" href="aliança.html#Noivado">Noivado</a></li>
+            <li><a class="dropdown-item" href="aliança.html#Namoro">Namoro</a></li>
+            <li><a class="dropdown-item" href="aliança.html#5mm">5mm</a></li>
+            <li><a class="dropdown-item" href="aliança.html#3mm">3mm</a></li>
+            <li><a class="dropdown-item" href="aliança.html#2mm">2mm</a></li>
+
+
+
+    
+          </ul>
         </li>
-        
-        
-        <li class="dropdown">
-          <a href="">Informações</a>
 
-          <div class="mega-menu">
-            <div class="mega-column">
-              <h3>Categoria</h3>
-              <a href="garantia.html">Garantia</a>
-              <a href="cuidados.html">Cuidados e convervação</a>
-              <a href="confianca.html">confiança</a>
-            </div>
-  
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Informações
+          </a>
+          <ul class="dropdown-menu">
+           <li><a class="dropdown-item mega-column h3" href="#">Categorias</a></li>
+            <li><hr class="dropdown-divider"></li>
             
-
-            <li class="dropdown">
-          <a href="#">Historia</a>
-
-          <div class="mega-menu">
-            <div class="mega-column">
-              <h3>Categoria</h3>
-              <a href="historia.html">Tradição</a>
-              <a href="sobre.html">Sobre</a>
-              
-            </div>
-  
-           
-  
-          </div>
+             <li><a class="dropdown-item" href="garantia.html">Garantia</a></li>
+            <li><a class="dropdown-item" href="cuidados.html">Cuidados e Convervação</a></li>
+            <li><a class="dropdown-item" href="guia.html">Guia de Medidas</a></li>
+            <li><a class="dropdown-item" href="confianca.html">Confiança</a></li>
+          </ul>
         </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Historia
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item mega-column h3 dropdown" href="#">Categoria</a></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item " href="historia.html">Tradição</a></li>
+            <li><a class="dropdown-item" href="sobre.html">Sobre</a></li>
+       
+          </ul>
+        </li>
+
+
       </ul>
-    </nav>
-  
-    <div class="icons">
+        <div class="icons">
       
-      <span><a href="sobre.html">👥</span></a>
+        <span><a href="sobre.html">👥</span></a>
       <span><a href="carrinho.html">🛒</a></span>
     </div>
-  </header>
+   
+  </div>
+</nav>
+
 
 <main class="confianca-page">
   <section class="confianca-hero">
@@ -108,25 +118,25 @@
         <p class="lead">Na INOVA Joias, cada compra é transparente, verificada e protegida para garantir a sua tranquilidade e satisfação.</p>
       </div>
 
-      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-image" aria-hidden="true"> <img src="img/aliancasanel.webp" alt=""></div>
     </div>
   </section>
 
-  <section class="cards-section container">
-    <div class="card card-zoom">
-      <div class="card-icon">✔️</div>
+  <section class="mico-section container">
+    <div class="cabes cabes-zoom">
+      <div class="cabes-icon">✔️</div>
       <h3>Compra Verificada</h3>
       <p>Todos os pedidos são conferidos e autenticados antes do envio, garantindo que você receba exatamente o que comprou.</p>
     </div>
 
-    <div class="card card-zoom">
-      <div class="card-icon">🔒</div>
+    <div class="cabes cabes-zoom">
+      <div class="cabes-icon">🔒</div>
       <h3>Pagamentos Seguros</h3>
       <p>Transações protegidas por criptografia de ponta a ponta e sistemas confiáveis, mantendo seus dados totalmente seguros.</p>
     </div>
 
-    <div class="card card-zoom">
-      <div class="card-icon">📦</div>
+    <div class="cabes cabes-zoom">
+      <div class="cabes-icon">📦</div>
       <h3>Entrega Garantida</h3>
       <p>Rastreamento completo do pedido e embalagens especiais que protegem suas joias até a sua chegada.</p>
     </div>
@@ -167,41 +177,37 @@
 </main>
 
 <footer>
-  <div class="footer-container">
-    <div>
-      <h3>InovaJoias</h3>
-      <p>Alta joalheria com pedras preciosas e design atemporal desde 1985.</p>
-      <div class="social">
-        <a href="#">📷</a>
-        <a href="#">📘</a>
-        <a href="#">▶️</a>
+    <div class="footer-container">
+      <div>
+        <h3>InovaJoias</h3>
+        <p>Alta joalheria com pedras preciosas e design atemporal desde 1985.</p>
+      </div>
+      <div>
+        <h4>Coleções</h4>
+        <ul>
+          <a href="joias.html#Aneis"><li>Anéis</li></a>
+          <a href="joias.html#Colares"><li>Colares</li></a>
+          <a href="joias.html#Pulseiras"><li>Pulseiras</li></a>
+          <a href="joias.html#Pingentes"><li>Pingentes</li></a>
+        </ul>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <a href="aliança.html"><li>Joias Personalizadas</li></a>
+          <a href="cuidados.html"><li>Manutenção</li></a>
+          <a href="confianca.html"><li>Certificação</li></a>
+          <a href="historia.html"><li>Tradição</li></a>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Av. Faria Pereira, 2777<br>Patrocínio - MG</p>
+        <p>inovajoias@gmail.com.br<br>(34) 3831-7770</p>
       </div>
     </div>
-    <div>
-      <h4>Coleções</h4>
-      <ul>
-        <li>Anéis</li>
-        <li>Colares</li>
-        <li>Pulseiras</li>
-        <li>Brincos</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Serviços</h4>
-      <ul>
-        <li>Joias Personalizadas</li>
-        <li>Manutenção</li>
-        <li>Certificação</li>
-        <li>Avaliação</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contato</h4>
-      <p>Av. Gilberto de Dênis, 2777<br>Patrocínio - MG</p>
-      <p>inovajoias@gmail.com.br<br>(34) 3831-7770</p>
-    </div>
-  </div>
-  <p class="copy">© 2025 inovajoias. Todos os direitos reservados.</p>
-</footer>
+    <p class="copy">© 2025 inovajoias. Todos os direitos reservados.</p>
+  </footer>
+   <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

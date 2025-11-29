@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anel Prata Inova Triplo Brilhante</title>
+<link rel="stylesheet" href="../style.css">
+
+<style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .produto-page {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .galeria img {
+        width: 180%;
+        border-radius: 6px;
+    }
+
+    .produto-info h1 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .metal {
+        font-size: 13px;
+        color: #444;
+        margin-bottom: 10px;
+    }
+
+    .preco {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .tamanhos {
+        margin-bottom: 20px;
+    }
+
+    .tamanhos button {
+        border: 1px solid #222;
+        background: none;
+        padding: 7px 12px;
+        margin-right: 6px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .btn-grande {
+        width: 100%;
+        background: #cfcfcf;
+        padding: 14px;
+        margin-top: 10px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 600;
+        border: none;
+    }
+
+    .btn-comprarapida {
+        width: 100%;
+        background: #5dd6d4;
+        padding: 14px;
+        margin-top: 10px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 600;
+        border: none;
+    }
+
+    .vantagens {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .vantagens div {
+        margin-bottom: 6px;
+    }
+
+    .guia-tamanho {
+        margin-top: 15px;
+        font-size: 14px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.zoom {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.zoom:hover {
+    transform: scale(1.15); 
+}
+.card-produto {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.06);
+}
+
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 22px rgba(0,0,0,0.12);
+}
+
+
+.card-produto img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-produto img:hover {
+    transform: scale(1.06);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+}
+
+
+.card-produto h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+
+.preco {
+    font-size: 19px;
+    color: #0088b8;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+
+.add-cart-btn {
+    background: linear-gradient(135deg, #19b3d1, #0e8ab1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.add-cart-btn:hover {
+    background: linear-gradient(135deg, #0e8ab1, #0a6d8c);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-top: 100px; 
+    margin-bottom: 30px; 
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.lg {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.lg-img {
+    height: 40px;     
+    width: auto;
+    object-fit: contain;
+}.navbar {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  font-family: "Helvetica Neue", sans-serif;
+}
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .titulo-pagina {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .hamburger {
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+ 
+  nav {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 15px 0;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+
+  .dropdown:hover .mega-menu {
+    display: none;
+  }
+
+  .mega-menu {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .icons {
+    font-size: 26px;
+  }
+
+
+  .titulo-pagina {
+    font-size: 30px;
+    margin-top: 60px;
+  }
+
+
+  .grid-produtos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+  }
+
+  .card-produto img {
+    height: 220px;
+  }
+
+  .card-produto {
+    padding: 15px;
+  }
+
+  .preco {
+    font-size: 17px;
+  }
+
+  .add-cart-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .titulo-pagina {
+    font-size: 26px;
+  }
+
+  .grid-produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-produto img {
+    height: 200px;
+  }
+
+  .card-produto h3 {
+    font-size: 16px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="produto-page">
+
+   
+    <div class="galeria">
+        <img src="../jj/PingenteSolitario.webp">
+      
+    </div>
+
+
+    
+    <div class="produto-info">
+
+        <h1>Pingente Prata Luz Pura Inova </h1>
+        <div class="metal">Metal: Prata 925</div>
+
+        <div class="preco">R$ 1.690,00</div>
+
+        <div class="tamanhos">
+            <strong>TAMANHO</strong><br><br>
+            <button>14</button>
+            <button>15</button>
+            <button>16</button>
+            <button>17</button>
+            <button>18</button>
+        </div>
+
+        <div class="guia-tamanho">📏 GUIA DE TAMANHO</div>
+
+        <button class="add-cart-btn"
+         onclick="addItemFromPage('Pingente Prata Luz Pura Inova', 1690.00, 'img/anel1.png')">
+          Adicionar ao carrinho
+        </button>
+        <a href="../joias.html#Pingentes"><button class="btn-comprarapida">Voltar</button></a>
+
+        <div class="vantagens">
+            <div>🛍️ Parcelamento em até 10x sem juros</div>
+            <div>🔄 Não serviu? Troque gratuitamente.</div>
+            <div>🎁 Embalagem para presente</div>
+             <div>🚚 Frete GRÁTIS em compras acima de partir de R$ 290,00</div>
+        </div>
+
+    </div>
+
+</div>
+<script src="../script1.js"></script>
+</body>
+</html>
